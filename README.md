@@ -1,16 +1,22 @@
-# Runner Circle - React + GraphQL
+# 🏃‍♂️ Runner Circle — React + GraphQL
 
-Este projeto utiliza **React** com foco em consumo de APIs via **GraphQL**, proporcionando uma interface moderna, eficiente e escalável. A estrutura foi iniciada com Vite para aproveitamento de Hot Module Replacement (HMR) e algumas regras de ESLint.
+Bem-vindo ao **Runner Circle**! Este projeto é um exemplo moderno de consumo de APIs **GraphQL** via **React**, proporcionando uma interface amigável, eficiente e super escalável. Construído com **Vite** para máxima performance, Hot Module Replacement (HMR) instantâneo e boas práticas de desenvolvimento.
 
-## Principais Tecnologias
+![React + GraphQL + Vite](https://raw.githubusercontent.com/mrsMatheusRocha/runner-circle/main/assets/banner-runner-circle.png)
 
-- **React**: construção de interfaces dinâmicas e responsivas.
-- **GraphQL**: busca, criação e modificação de dados por meio de queries e mutations otimizadas.
-- **Apollo Client** (sugestão): para integração com GraphQL no front-end.
-- **Vite**: bundler rápido que facilita o desenvolvimento com React.
-- **JavaScript (97,6%)**, **CSS (1,2%)**, **HTML (1,2%)**
+---
 
-## Exemplo de uso do GraphQL com React
+## 🚀 Tecnologias Principais
+
+- **React** — Interfaces dinâmicas e responsivas.
+- **GraphQL** — Queries & mutations ágeis para busca e manipulação de dados.
+- **Apollo Client** — Integração fluida com APIs GraphQL no front-end.
+- **Vite** — Bundler _ultra-rápido_ com experiência DX aprimorada.
+- **JavaScript (97.6%)**, **CSS (1.2%)**, **HTML (1.2%)**
+
+---
+
+## ✨ Exemplo de uso: GraphQL + Apollo Client + React
 
 ```jsx
 import { ApolloClient, InMemoryCache, ApolloProvider, useQuery, gql } from '@apollo/client';
@@ -53,20 +59,33 @@ function App() {
 }
 ```
 
-## Como rodar
+---
 
-1. Instale as dependências:
-   ```
+## 🔥 Como rodar o projeto
+
+1. **Instale as dependências:**
+   ```bash
    npm install
    ```
-2. Inicie o servidor de desenvolvimento:
-   ```
+2. **Inicie o servidor de desenvolvimento:**
+   ```bash
    npm run dev
    ```
-
-## Expansão
-
-Recomenda-se utilizar TypeScript e configurar regras avançadas no ESLint para produção. Consulte o [template TS do Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) para referências.
+3. **Acesse:** [http://localhost:5173](http://localhost:5173) e veja a mágica acontecer 👀
 
 ---
-Projeto desenvolvido por [mrsMatheusRocha](https://github.com/mrsMatheusRocha).
+
+## 🛠 Dicas e Expansão
+
+- Utilize **TypeScript** para maior confiabilidade e produtividade.
+- Configure **ESLint** com regras avançadas para garantir qualidade no código.
+- Explore [Vite + React + TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) para turbinar seu setup.
+
+---
+
+## 🤝 Autor
+
+Desenvolvido por [mrsMatheusRocha](https://github.com/mrsMatheusRocha) com 💙.  
+Fique à vontade para contribuir ou dar aquele ⭐️ no repositório!
+
+---
