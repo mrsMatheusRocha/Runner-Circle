@@ -1,12 +1,72 @@
-# React + Vite
+# Runner Circle - React + GraphQL
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto utiliza **React** com foco em consumo de APIs via **GraphQL**, proporcionando uma interface moderna, eficiente e escalável. A estrutura foi iniciada com Vite para aproveitamento de Hot Module Replacement (HMR) e algumas regras de ESLint.
 
-Currently, two official plugins are available:
+## Principais Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: construção de interfaces dinâmicas e responsivas.
+- **GraphQL**: busca, criação e modificação de dados por meio de queries e mutations otimizadas.
+- **Apollo Client** (sugestão): para integração com GraphQL no front-end.
+- **Vite**: bundler rápido que facilita o desenvolvimento com React.
+- **JavaScript (97,6%)**, **CSS (1,2%)**, **HTML (1,2%)**
 
-## Expanding the ESLint configuration
+## Exemplo de uso do GraphQL com React
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```jsx
+import { ApolloClient, InMemoryCache, ApolloProvider, useQuery, gql } from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: 'https://sua-api-graphql.com/graphql',
+  cache: new InMemoryCache()
+});
+
+const GET_USERS = gql`
+  query GetUsers {
+    users {
+      id
+      name
+    }
+  }
+`;
+
+function Users() {
+  const { loading, error, data } = useQuery(GET_USERS);
+
+  if (loading) return <p>Carregando...</p>;
+  if (error) return <p>Erro :(</p>;
+
+  return (
+    <ul>
+      {data.users.map(({ id, name }) => (
+        <li key={id}>{name}</li>
+      ))}
+    </ul>
+  );
+}
+
+function App() {
+  return (
+    <ApolloProvider client={client}>
+      <Users />
+    </ApolloProvider>
+  );
+}
+```
+
+## Como rodar
+
+1. Instale as dependências:
+   ```
+   npm install
+   ```
+2. Inicie o servidor de desenvolvimento:
+   ```
+   npm run dev
+   ```
+
+## Expansão
+
+Recomenda-se utilizar TypeScript e configurar regras avançadas no ESLint para produção. Consulte o [template TS do Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) para referências.
+
+---
+Projeto desenvolvido por [mrsMatheusRocha](https://github.com/mrsMatheusRocha).
