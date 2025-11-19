@@ -2,8 +2,6 @@
 
 Bem-vindo ao **Runner Circle**! Este projeto é um exemplo moderno de consumo de APIs **GraphQL** via **React**, proporcionando uma interface amigável, eficiente e super escalável. Construído com **Vite** para máxima performance, Hot Module Replacement (HMR) instantâneo e boas práticas de desenvolvimento.
 
-![React + GraphQL + Vite](https://raw.githubusercontent.com/mrsMatheusRocha/runner-circle/main/assets/banner-runner-circle.png)
-
 ---
 
 ## 🚀 Tecnologias Principais
